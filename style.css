@@ -1,0 +1,116 @@
+.container{
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    padding: 50px;
+
+    gap: 20px;
+}
+
+/* --- SPIN --- */
+.wadah-spin{
+    border: 1px solid black;
+    width: 300px;
+    position: relative;
+
+    /* margin: 50px auto; */
+
+    background-color: #ddd;
+}
+
+.panah{
+    /* atur ukuran kotak menjadi 0 */
+    width: 0;
+    height: 0;
+
+    /* matikan border samping */
+    border-left: 10px solid transparent; /* lebar sisi kiri */
+    border-right: 10px solid transparent; /* lebar sisi kanan*/
+
+    /* nyalakan border atas dengan warna */
+    border-bottom: 40px solid #c90f02; /* tinggi dan warna panah */
+
+    position: absolute;
+    bottom: -20px;
+
+    /* cnetering */
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 10;
+}
+
+.roda{
+    /* border: 1px solid red; */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 5px solid #fff;
+    box-sizing: border-box;
+    background: conic-gradient(
+        #4caf50 0deg 22.5deg,
+
+        #f44336 22.5deg 67.5deg,
+        #2196f3 67.5deg 112.5deg,
+        #ff9800 112.5deg 157.5deg,
+        #4caf50 157.5deg 202.5deg,
+        #f44336 202.5deg 247.5deg,
+        #2196f3 247.5deg 292.5deg,
+        #ff9800 292.5deg 337.5deg,
+
+        #4caf50 337.5deg 360deg);
+
+    transition: transform 5s ease-out;
+}
+
+.teks-hadiah{
+    /* border: 1px solid black; */
+    line-height: 1;
+    position: absolute;
+
+    width: 100%;
+    
+    padding-left: 30px;
+
+    color: #fff;
+}
+
+.lingkaran-tengah{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background: conic-gradient(
+        #4caf50 0deg 45deg,
+
+        #f44336 45deg 135deg,
+        #2196f3 135deg 225deg,
+        #ff9800 225deg 315deg,
+
+        #4caf50 315deg 360deg
+    );
+
+    border: 2px solid #fff;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+
+/* --- FITUR --- */
+.wadah-fitur{
+    border: 1px solid red;
+}
