@@ -1,24 +1,82 @@
+body, div, button, p, h3{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+}
+
+button{
+    padding: 5px 5px;
+}
+
 .container{
-    border: 1px solid black;
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
     flex-direction: row;
+}
 
-    justify-content: center;
+/* --- LAYOUT KIRI ---*/
+.layout-kiri{
+    /* border: 1px solid red; */
+    /* width: 300px; */
+    background-color: #e1e1e1;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wadah-mode-permainan{
+    display: flex;
+    flex-direction: column;
+
+    /* border: 1px solid black; */
+    padding: 20px;
+    width: max-content;
+    background-color: #fff9f0;
+    border-radius: 10px;
+}
+
+.kepribadian{
+    color: #da8300;
+}
+
+.label-mode{
+    /* border: 1px solid red; */
+    color: #da8300;
+}
+
+/* --- LAYOUT TENGAH ---*/
+.layout-tengah{
+    /* border: 1px solid black; */
     padding: 50px;
+    background-color: #eee;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 20px;
+    flex: 1;
 }
 
 /* --- SPIN --- */
+.container-spin{
+    /* border: 1px solid black; */
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+    flex: 1;
+}
+
 .wadah-spin{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 300px;
+    height: 300px;
     position: relative;
-
-    /* margin: 50px auto; */
-
-    background-color: #ddd;
 }
 
 .panah{
@@ -27,8 +85,8 @@
     height: 0;
 
     /* matikan border samping */
-    border-left: 10px solid transparent; /* lebar sisi kiri */
-    border-right: 10px solid transparent; /* lebar sisi kanan*/
+    border-left: 15px solid transparent; /* lebar sisi kiri */
+    border-right: 15px solid transparent; /* lebar sisi kanan*/
 
     /* nyalakan border atas dengan warna */
     border-bottom: 40px solid #c90f02; /* tinggi dan warna panah */
@@ -70,19 +128,20 @@
 
         #4caf50 337.5deg 360deg);
 
-    transition: transform 5s ease-out;
+    transition: transform 6s ease-out;
 }
 
 .teks-hadiah{
     /* border: 1px solid black; */
-    line-height: 1;
     position: absolute;
 
+    line-height: 1;
     width: 100%;
-    
     padding-left: 30px;
-
     color: #fff;
+}
+.teks-hadiah:hover{
+    cursor: default;
 }
 
 .lingkaran-tengah{
@@ -111,6 +170,299 @@
 
 
 /* --- FITUR --- */
+.container-fitur{
+    /* border: 1px solid red; */
+    
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
 .wadah-fitur{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    width: 300px;
+    height: 300px;
+    background-color: #fefefe;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    position: relative;
+}
+
+.nominal-hadiah{
+    /* border: 1px solid black; */
+    font-weight: bold;
+    color: #777;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nominal-saldo{
+    border: 1px solid #419744;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #dbffdc;
+    color: #419744;
+}
+
+.wadah-energi-tambah-rp{
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    font-weight: bold;
+}
+
+.energi{
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #e1f2ff;
+    color: #2196f3;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-tambah-energi{
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #e1f2ff;
+    color: #2196f3;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 15px;
+}
+.btn-tambah-energi:hover{
+    background-color: #cce7fc;
+    cursor: pointer;
+}
+.btn-tambah-energi:active{
+    scale: 1.03;
+}
+
+.btn-tambah-saldo{
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    color: #419744;
+    background-color: #dbffdc;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-tambah-saldo:hover{
+    background-color: #b3ffb6;
+    cursor: pointer;
+}
+.btn-tambah-saldo:active{
+    scale: 1.03;
+}
+
+/* setelah klik +Rp */
+.wadah-tambah-saldo{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    border: 1px solid #419744;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f4fff5;
+}
+
+.tambah-saldo{
+    border: 1px solid #419744;
+    background-color: #dbffdc;
+    color: #419744;
+    font-weight: bold;
+
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.tambah-saldo:hover{
+    background-color: #b3ffb6;
+    cursor: pointer;
+}
+.tambah-saldo:active{
+    scale: 1.03;
+}
+
+.close-tambah-saldo{
+    color: #c90f02;
+    font-weight: bold;
+
+    border: 1px solid #c90f02;
+    background-color: #ffe6e4;
+    border-radius: 5px;
+    width: max-content;
+    height: max-content;
+    padding: 0 5px;
+
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+.close-tambah-saldo:hover{
+    background-color: #fcd1ce;
+    cursor: pointer;
+}
+.close-tambah-saldo:active{
+    scale: 1.05;
+}
+
+/* setelah klik +E */
+.wadah-tambah-energi{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+
+    border: 1px solid #2196f3;
+    background-color: #f3faff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.wadah-item-energi{
+    border: 1px solid #2196f3;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #e1f2ff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banyak-energi{
+    color: #2196f3;
+}
+
+.harga-energi{
+    background-color: #dbffdc;
+    color: #419744;
+    font-weight: bold;
+    border: 1px solid #419744;
+    border-radius: 5px;
+}
+.harga-energi:hover{
+    background-color: #b3ffb6;
+    cursor: pointer;
+}
+.harga-energi:active{
+    scale: 1.03;
+}
+
+.close-tambah-energi{
+    color: #c90f02;
+    font-weight: bold;
+
+    border: 1px solid #c90f02;
+    background-color: #ffe6e4;
+    border-radius: 5px;
+    width: max-content;
+    height: max-content;
+    padding: 0 5px;
+
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+.close-tambah-energi:hover{
+    background-color: #fcd1ce;
+    cursor: pointer;
+}
+.close-tambah-energi:active{
+    scale: 1.05;
+}
+
+.btn-spin{
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ff9800;
+    color: #fff;
+}
+.btn-spin:hover{
+    background-color: #f39200;
+    cursor: pointer;
+}
+.btn-spin:active{
+    scale: 1.03;
+}
+
+.keterangan-spin{
+    color: #c90f02;
+    font-size: 12px;
+
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.keteranga-tambah-energi{
+    color: #c90f02;
+    font-size: 12px;
+    font-weight: normal;
+
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.keterangan-harga-energi{
+    color: #c90f02;
+    font-size: 12px;
+    font-weight: normal;
+
+    position: absolute;
+    top: -20px;
+    left: 5px;
+}
+
+/* --- LAYOUT KANAN --- */
+.layout-kanan{
+    /* border: 1px solid orange; */
+    width: 200px;
+    background-color: #e1e1e1;
 }
